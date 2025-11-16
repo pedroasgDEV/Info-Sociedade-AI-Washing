@@ -1,0 +1,204 @@
+%------------ Design dos slides -------------
+
+\documentclass{beamer}
+\usetheme{Warsaw}
+\useoutertheme{miniframes}
+\usecolortheme{beaver}
+
+%------------ Language packages -------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+%------------- Useful packages --------------
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+%----------------- bibtex --------------------
+
+\usepackage[backend=bibtex,style=authoryear]{biblatex}
+\addbibresource{main.bib} 
+
+%------------------ TITLE ------------------- 
+
+\title{Aplicação da IA como elemento de marketing}
+\subtitle{Entre a inovação e o mau uso no mercado e na academia}
+\author{Pedro Augusto Sousa Gonçalves \\ Bruno \\ Tiago}
+\institute{Departamento de Computação \\ Universidade Federal de Ouro Preto}
+\date{22 de outubro de 2025}
+
+%---------------- Document ------------------ 
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% 2. Slide do Sumário
+\begin{frame}
+    \frametitle{Sumário}
+    \tableofcontents
+\end{frame}
+
+\section{Motivação} 
+
+\begin{frame}{AI Washing}
+    \begin{columns}
+        \begin{column}{0.60\textwidth}
+            \begin{itemize}
+                \item Nossa análise foca no \textbf{AI Washing}: o uso da IA como selo de marketing, e não como uma ferramenta de valor real.
+                
+                \item Tal como foi exposto em \cite{Woollacott2024AIWashing}, atualmente a IA tornou-se um selo de inovação para agregar valor percebido, favorecendo o uso \textbf{cosmético} e \textbf{impensado}, focado mais no hype do que no valor real.
+                
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.40\textwidth}
+            \begin{figure}
+                \includegraphics[width=1.1\textwidth]{meme1.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+    \href{https://youtu.be/s4wlrxFf2lM?si=Bklwu49XH0oW3PKs&t=2276}{Vídeo do Linus Torvalds falando sobre o hype da IA}
+\end{frame}
+
+
+\begin{frame}{Exemplos}
+    \begin{itemize}
+        \item \textbf{Humanos Disfarçados de IA}: A tecnologia não está pronta, então a empresa usa humanos "nos bastidores" para executar as tarefas, fingindo ser um algoritmo avançado.
+        \item \textbf{Automação Simples (Se-Então)}: A empresa substitui seu antigo sistema de FAQ por um chatbot, mas a lógica por trás dele não é inteligência e sim automação, mas é vendido como IA.
+        \item \textbf{Estatística Reembalada}: Ocorre quando técnicas estatísticas padrão (como regressão logística ou keyword matching) são vendidas como "IA" ou "Machine Learning".
+        \item \textbf{Over-Engineering}: Ocorre quando a solução mais simples e transparente é descartada em favor da IA, apenas para que a empresa ou o pesquisador possa alegar que está usando "tecnologia de ponta".
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Consequências}
+    \begin{itemize}
+        \item \textbf{Alocação Incorreta de Capital (A Bolha da IA)}: Investidores têm dificuldade em distinguir o hype da realidade.
+        \begin{figure}
+                \includegraphics[width=.6\textwidth]{noticia.png}
+                \caption{\cite{thurrott_openai_loss2025}}
+        \end{figure}
+        \item \textbf{Desperdício de Recursos e Dívida Técnica}: Gasta-se tempo de engenheiros de elite, poder computacional e energia elétrica para resolver problemas simples.
+        \item \textbf{Poluição Científica}: Na academia, o uso impensado enche os periódicos científicos com pesquisas de baixo rigor.
+    \end{itemize}
+\end{frame}
+
+\section{Introdução} 
+
+\begin{frame}{O que é IA, de Fato?}
+    \begin{itemize}
+        \item A inteligência artificial envolve o desenvolvimento de sistemas que realizam tarefas antes restritas ao raciocínio humano (\cite{russell_norvig_aima2021}).
+        \item \textbf{IA Forte}: É a IA da ficção científica. Uma máquina com consciência, capaz de aprender e executar qualquer tarefa intelectual que um humano pode. Isto não existe.
+        \item \textbf{IA Fraca}: É um sistema treinado para executar uma tarefa específica de forma muito eficaz (ex: reconhecer um rosto, traduzir um texto, jogar xadrez, dirigir um carro).
+        \item O "AI Washing" muitas vezes insinua ter capacidades de IA Forte, quando, na melhor das hipóteses, entrega uma IA Fraca ou, na pior, nada.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{O que é IA, de Fato?}
+    \begin{columns}
+        \begin{column}{0.60\textwidth}
+            \begin{figure}
+                \includegraphics[width=1\textwidth]{gpt_calc.png}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.40\textwidth}
+            \begin{figure}
+                \includegraphics[width=0.6\textwidth]{gpt_coding.jpeg}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{A História da IA}
+    \begin{itemize}
+        \item \textbf{Anos 50}
+        \begin{itemize}
+            \item \textbf{Alan Turing (1950)}: Propõe o "Teste de Turing".
+            \item \textbf{Conferência de Dartmouth (1956)}: O termo "Inteligência Artificial" é oficialmente cunhado. Foram feitas promessas extraordinárias para o futuro da IA Forte, que foram financiadas por agências governamentais.
+        \end{itemize}
+        \item \textbf{O 1º "Inverno da IA" (Anos 70-80)}
+        \begin{itemize}
+            \item \textbf{Explosão Combinatória}: Os pesquisadores descobriram que os seus programas funcionavam bem em problemas fictícios (\textbf{controlados}), mas falhavam no mundo real (\textbf{complexo demais}).
+            \item \textbf{Hardware e Dados Insuficientes}: Os computadores eram lentos, caros e tinham memória minúscula.
+            \item \textbf{O Relatório de \cite{lighthill1973}}: Demonstrou que as pesquisas em IA falharam em cumprir suas promessas. Em resposta, o financiamento foi cortado.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{A História da IA}
+    \begin{itemize}
+        \item \textbf{2º "Inverno da IA" (Anos 90) (\cite{crevier1993_ai_history})}
+        \begin{itemize}
+            \item \textbf{IA Fraca como a "Nova Promessa"}: A nova ideia era capturar o conhecimento de um especialista humano e colocá-lo num programa. 
+            \item \textbf{Sistema Especialista}: Um motor de inferência gigante com milhares de regras IF-THEN.
+            \item \textbf{Máquinas Lisp}: O Hype Comercial fez as empresas investiram bilhões de dólares. Surgiram empresas especializadas em computadores caríssimos feitos só para rodar IA.
+            \item \textbf{Colapso}
+            \begin{itemize}
+                \item O "Gargalo da Aquisição de Conhecimento".
+                \item Os sistemas eram "frágeis".
+                \item Alto Custo e Manutenção.
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{A História da IA}
+    \begin{itemize}
+        \item \textbf{O "Big Bang" (Pós-2010) ou "Verão da IA"}
+        \begin{itemize}
+            \item \textbf{ImageNet (\cite{ImageNet})}: Foi um esforço acadêmico massivo para criar uma base de dados gigantesca de milhões de imagens.
+            \item \textbf{Hardware (GPUs e a NVIDIA)}:  Foi percebido que podiam usar GPUs de videojogos para acelerar o treino de IA em 100x ou 1000x. O que demoraria um ano, agora demorava dias.
+            \item \textbf{Deep Learning (\cite{lecun_bengio_hinton_2015})}: Pesquisadores como Geoffrey Hinton, Yann LeCun e Yoshua Bengio refinaram os algoritmos e provaram que redes neurais profundas poderiam funcionar se tivessem dados e poder computacional suficientes (\textbf{ganharam o nobel da física em 2024}).
+        \end{itemize}
+        \item A história mostra que a IA é um campo cíclico de hype e desilusão. O "AI Washing" é o sintoma comercial do pico de hype deste "Verão" atual.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Quais Tecnologias Estão por Trás do "IA" Hoje?}
+    \begin{itemize}
+        \item \textbf{Machine Learning (\cite{abdelkarim_pfeuffer_hinz_2021})}: Modelos estatísticos que encontram padrões e fazem previsões.
+        \item \begin{itemize}
+            \item Regressão Logística, Árvores de Decisão, SVMs. 
+            \item Prever se um cliente vai desistir, decidir se um e-mail é spam, segmentar clientes para marketing.
+        \end{itemize}
+        \item \textbf{Deep Learning}: É um subcampo do Machine Learning que usa "Redes Neurais Artificiais" com muitas camadas.
+        \begin{itemize}
+            \item \textbf{CNNs (Convolutional Neural Networks)}: Usam filtros matemáticos para aprender a detetar arestas, texturas, formas e, finalmente, objetos..
+            \item \textbf{GANs (Generative Adversarial Networks)}:um Gerador que tenta criar imagens realistas, e um Discriminador que tenta apanhar as falsificações.
+            \item \textbf{Transformers (\cite{vaswani2017_attention})}:um Gerador que tenta criar imagens realistas, e um Discriminador que tenta apanhar as falsificações.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Quais Tecnologias Estão por Trás do "IA" Hoje?}
+    \begin{itemize}
+        \item \textbf{LLMs (Large Language Models) (\cite{LLM})}: São o tipo mais avançado de IA Generativa, focados em processar e gerar texto em grande escala usando a arquitetura \textbf{Transformer}.
+        \begin{itemize}
+            \item \textbf{Tarefa Principal}: O treino de um LLM baseia-se num objetivo surpreendentemente simples: "prever a próxima palavra".
+            \item \textbf{Processo}: O modelo é alimentado com uma quantidade massiva de texto (quase toda a Internet: Wikipedia, livros, artigos, código-fonte). Ele recebe uma frase e tenta prever a palavra seguinte.
+            \item \textbf{Aprendizagem}: Ele é forçado a aprender as regras subjacentes do mundo contidas na linguagem, tais como: gramática, sintaxe, fatos, lógica, raciocínio, capacidade de programação.
+        \end{itemize}
+        \item As LLMs são o maior avanço da IA até agora, levando muitos a crer que atingimos a IA Forte, o que alimenta um hype massivo que, por sua vez, intensifica o "AI Washing".
+    \end{itemize}
+\end{frame}
+
+\section{Academia} 
+
+\section{Mercado}
+
+\section{Conclusão}
+
+\section{Referencia}
+
+\begin{frame}[allowframebreaks]{Referências}
+    \printbibliography
+\end{frame}
+
+\end{document}

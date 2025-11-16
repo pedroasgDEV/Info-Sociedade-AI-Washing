@@ -1,0 +1,87 @@
+# Arquivos temporários padrão do LaTeX
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.xdv
+
+# Arquivos gerados por pacotes
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.synctex.gz
+*.pdfsync
+
+# latexmk
+*.fdb_latexmk
+*.synctex(busy)
+
+# Arquivos temporários adicionais
+*.nav
+*.snm
+*.vrb
+
+# Beamer
+*.nav
+*.snm
+*.vrb
+
+# Meta arquivos do glossaries/acronym
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls*
+*.ist
+
+# TikZ e PGFPlots
+*.dpth
+*.md5
+*.auxlock
+
+# makeindex
+*.idx
+*.ilg
+*.ind
+
+# BibTeX
+*.blg
+*.bbl
+
+# Arara
+*.pse
+*.arlogs
+
+# Tectonic
+*.aux.d
+*.pass
+
+# VSCode
+.vscode/
+
+# TeXstudio
+*.txss
+*.tui
+
+# MacOS
+.DS_Store
+
+# Backup files
+*~
+*.bak
+*.backup
+
+# Diretórios comuns de build
+build/
+out/
+output/
+tmp/
